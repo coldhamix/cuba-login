@@ -80,8 +80,8 @@
             function(resp) {
               this.fire('cuba-login-success');
             }.bind(this),
-            function() {
-              this.fire('cuba-login-error');
+            function(error) {
+              this.fire('cuba-login-error', error);
             }.bind(this)
         );
       }
